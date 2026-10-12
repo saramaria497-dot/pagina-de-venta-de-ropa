@@ -1,0 +1,446 @@
+!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Store | Ropa Moderna</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/85 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#inicio" class="text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+                <span class="bg-indigo-600 text-white w-10 h-10 rounded-xl flex items-center justify-center shadow-md shadow-indigo-200">V</span>
+                VORTEX
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#inicio" class="hover:text-indigo-600 transition-colors">Inicio</a>
+                <a href="#camisas" class="hover:text-indigo-600 transition-colors">Camisas</a>
+                <a href="#pantalones" class="hover:text-indigo-600 transition-colors">Pantalones</a>
+                <a href="#sudaderas" class="hover:text-indigo-600 transition-colors">Sudaderas</a>
+                <a href="#contacto" class="hover:text-indigo-600 transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Right Actions (Cart & Mobile Menu Button) -->
+            <div class="flex items-center gap-4">
+                <button onclick="openCartMessage()" class="relative p-2.5 rounded-full hover:bg-slate-100 text-slate-700 transition-colors" aria-label="Carrito">
+                    <i class="fa-solid fa-bag-shopping text-lg"></i>
+                    <span class="absolute top-1 right-1 w-4 h-4 bg-indigo-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</span>
+                </button>
+                <a href="#camisas" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white text-sm font-semibold shadow-sm transition-all duration-300">
+                    Comprar Ahora
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-gradient-to-b from-indigo-50/50 via-slate-50 to-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Hero Content -->
+                    <div class="space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-700 text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-bolt text-indigo-600"></i> Nueva Colección 2026
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Define tu estilo con <span class="text-indigo-600">elegancia urbana</span>.
+                        </h1>
+                        <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0">
+                            Descubre prendas diseñadas para la comodidad y el rendimiento diario. Estilo minimalista, telas premium y cortes modernos para cada ocasión.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#camisas" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-200 transition-all text-center">
+                                Explorar Catálogo
+                            </a>
+                            <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 border border-slate-200 font-semibold transition-all text-center">
+                                Saber Más
+                            </a>
+                        </div>
+                        <!-- Trust badges -->
+                        <div class="pt-6 border-t border-slate-200/60 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+                            <div>
+                                <p class="text-2xl font-bold text-slate-900">+15k</p>
+                                <p class="text-xs text-slate-500 font-medium">Clientes Felices</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-slate-900">100%</p>
+                                <p class="text-xs text-slate-500 font-medium">Algodón Orgánico</p>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold text-slate-900">24/7</p>
+                                <p class="text-xs text-slate-500 font-medium">Soporte VIP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero Image Grid -->
+                    <div class="relative">
+                        <div class="absolute -top-10 -left-10 w-72 h-72 bg-indigo-300/30 rounded-full blur-3xl -z-10"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=600" alt="Estilo urbano mujer" class="w-full h-80 object-cover rounded-3xl shadow-xl shadow-slate-200 hover:scale-[1.02] transition-transform duration-500" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Modelo+1'">
+                            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=600" alt="Moda hombre moderna" class="w-full h-80 object-cover rounded-3xl shadow-xl shadow-slate-200 mt-8 hover:scale-[1.02] transition-transform duration-500" onerror="this.src='https://placehold.co/600x800/e2e8f0/475569?text=Modelo+2'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="camisas" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Colección Esencial</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Camisas & Blusas</h2>
+                    </div>
+                    <p class="text-slate-500 max-w-md mt-2 md:mt-0 text-sm">
+                        Diseños versátiles confeccionados con lino y algodón de alta calidad para mantener la frescura todo el día.
+                    </p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-sm z-10">Nuevo</span>
+                            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=600" alt="Camisa Oxford Minimal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Camisa+Oxford'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Camisa Oxford Clásica</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$45.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Corte tailored fit en algodón premium respirable.</p>
+                            <button onclick="addToCart('Camisa Oxford Clásica', '$45.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <span class="absolute top-3 left-3 bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm z-10">-15%</span>
+                            <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&q=80&w=600" alt="Camisa Lino Verano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Camisa+Lino'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Camisa de Lino Verano</h3>
+                                <div class="text-right">
+                                    <span class="text-indigo-600 font-bold text-lg">$52.00</span>
+                                    <span class="text-slate-400 text-xs line-through ml-1">$61.00</span>
+                                </div>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Ideal para días cálidos, textura ligera y fresca.</p>
+                            <button onclick="addToCart('Camisa de Lino Verano', '$52.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1589310243389-96a56832ff0a?auto=format&fit=crop&q=80&w=600" alt="Camisa Casual Oversized" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Camisa+Oversized'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Camisa Casual Oversized</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$48.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Estilo relajado moderno con solapa clásica.</p>
+                            <button onclick="addToCart('Camisa Casual Oversized', '$48.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pantalones" class="py-20 bg-slate-100/70">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Comodidad y Estilo</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Pantalones & Jeans</h2>
+                    </div>
+                    <p class="text-slate-500 max-w-md mt-2 md:mt-0 text-sm">
+                        Cortes precisos que ofrecen máxima movilidad sin sacrificar la elegancia y la durabilidad.
+                    </p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="group bg-white rounded-3xl p-4 border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-800 shadow-sm z-10">Popular</span>
+                            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&q=80&w=600" alt="Pantalón Chino Slim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Pantalon+Chino'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Pantalón Chino Slim Fit</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$60.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Tejido elástico de alta resistencia para uso diario.</p>
+                            <button onclick="addToCart('Pantalón Chino Slim Fit', '$60.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group bg-white rounded-3xl p-4 border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&q=80&w=600" alt="Jeans Straight Vintage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Jeans+Vintage'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Jeans Straight Vintage</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$68.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Denim lavado con tratamiento ecológico sostenible.</p>
+                            <button onclick="addToCart('Jeans Straight Vintage', '$68.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group bg-white rounded-3xl p-4 border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <span class="absolute top-3 left-3 bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm z-10">Nuevo</span>
+                            <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&q=80&w=600" alt="Pantalón Jogger Urbano" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Jogger+Urbano'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Pantalón Jogger Urbano</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$55.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Confort supremo con bolsillos utilitarios modernos.</p>
+                            <button onclick="addToCart('Pantalón Jogger Urbano', '$55.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sudaderas" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Confort & Calidez</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-1">Sudaderas & Hoodies</h2>
+                    </div>
+                    <p class="text-slate-500 max-w-md mt-2 md:mt-0 text-sm">
+                        Prendas abrigadas con interiores afelpados y capuchas estructuradas para un look contemporáneo.
+                    </p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&q=80&w=600" alt="Sudadera con Capucha Minimal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Hoodie+Minimal'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Hoodie Minimal Black</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$75.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Algodón pesado cardado con capucha de doble capa.</p>
+                            <button onclick="addToCart('Hoodie Minimal Black', '$75.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm z-10">Tendencia</span>
+                            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&q=80&w=600" alt="Sudadera Oversized Pastel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Hoodie+Pastel'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Sudadera Oversized Sand</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$70.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Corte relajado y tacto ultra suave premium.</p>
+                            <button onclick="addToCart('Sudadera Oversized Sand', '$70.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="group bg-slate-50 rounded-3xl p-4 border border-slate-100 hover:shadow-xl hover:bg-white transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[4/5] bg-slate-200 mb-4">
+                            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=600" alt="Sudadera Crewneck Essential" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x750/cbd5e1/334155?text=Crewneck'">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h3 class="font-bold text-slate-900 text-lg">Crewneck Essential</h3>
+                                <span class="text-indigo-600 font-bold text-lg">$65.00</span>
+                            </div>
+                            <p class="text-slate-500 text-sm mb-4">Cuello redondo clásico de alta durabilidad.</p>
+                            <button onclick="addToCart('Crewneck Essential', '$65.00')" class="w-full py-3 px-4 bg-slate-900 hover:bg-indigo-600 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Añadir al Carrito
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.15),transparent_50%)]"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Únete a la Comunidad</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Recibe un 15% de descuento en tu primer pedido</h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+                    Suscríbete a nuestro boletín para enterarte de lanzamientos exclusivos, ofertas privadas y tendencias de moda urbana.
+                </p>
+                <form onsubmit="handleSubscribe(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
+                    <input type="email" id="emailInput" required placeholder="Ingresa tu correo electrónico" class="flex-1 px-5 py-4 rounded-2xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 text-sm">
+                    <button type="submit" class="px-8 py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-500 font-semibold text-sm transition-colors shadow-lg shadow-indigo-600/30">
+                        Suscribirse
+                    </button>
+                </form>
+                <p class="text-xs text-slate-500">Respetamos tu privacidad. Puedes darte de baja en cualquier momento.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <a href="#inicio" class="text-2xl font-extrabold tracking-tight text-white flex items-center gap-2">
+                        <span class="bg-indigo-600 text-white w-8 h-8 rounded-lg flex items-center justify-center text-sm shadow-md">V</span>
+                        VORTEX
+                    </a>
+                    <p class="text-sm text-slate-400">
+                        Moda contemporánea para espíritus libres y vanguardistas. Calidad superior en cada hilo.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white flex items-center justify-center transition-colors text-slate-300"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white flex items-center justify-center transition-colors text-slate-300"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white flex items-center justify-center transition-colors text-slate-300"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Navegación</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#camisas" class="hover:text-white transition-colors">Camisas</a></li>
+                        <li><a href="#pantalones" class="hover:text-white transition-colors">Pantalones</a></li>
+                        <li><a href="#sudaderas" class="hover:text-white transition-colors">Sudaderas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Ayuda & Soporte</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" onclick="openModal('Estado de Envío')" class="hover:text-white transition-colors">Seguimiento de Pedido</a></li>
+                        <li><a href="#" onclick="openModal('Guía de Tallas')" class="hover:text-white transition-colors">Guía de Tallas</a></li>
+                        <li><a href="#" onclick="openModal('Devoluciones')" class="hover:text-white transition-colors">Políticas de Devolución</a></li>
+                        <li><a href="#contacto" class="hover:text-white transition-colors">Contacto Directo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Ubicación & Contacto</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-indigo-500"></i> Av. Moda 452, Ciudad Global</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-indigo-500"></i> contacto@vortexstore.com</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-indigo-500"></i> +1 (555) 382-9011</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Vortex Store. Todos los derechos reservados.</p>
+                <div class="flex gap-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400">Política de Privacidad</a>
+                    <a href="#" class="hover:text-slate-400">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Toast/Modal -->
+    <div id="notificationModal" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-2xl border border-slate-800 flex items-center gap-3">
+            <div id="modalIcon" class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <div>
+                <p id="modalTitle" class="font-semibold text-sm">¡Añadido al carrito!</p>
+                <p id="modalDesc" class="text-xs text-slate-400">El producto se agregó correctamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Interactive functions
+        function addToCart(productName, price) {
+            showNotification('¡Producto añadido!', `${productName} (${price}) se agregó al carrito.`);
+        }
+
+        function openCartMessage() {
+            showNotification('Tu Carrito', 'Tienes 3 artículos seleccionados listos para pago.');
+        }
+
+        function handleSubscribe(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            if(email) {
+                showNotification('¡Suscripción exitosa!', 'Te hemos enviado el cupón del 15% a tu correo.');
+                document.getElementById('emailInput').value = '';
+            }
+        }
+
+        function openModal(title) {
+            showNotification(title, 'Información detallada disponible pronto en soporte.');
+        }
+
+        function showNotification(title, desc) {
+            const modal = document.getElementById('notificationModal');
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = desc;
+            
+            modal.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+            modal.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                modal.classList.remove('translate-y-0', 'opacity-100');
+                modal.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
